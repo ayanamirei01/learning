@@ -1,0 +1,22 @@
+查看网络接口
+  ip addr show
+
+  route 路由
+
+systemctl restart NetworkManager.service
+
+网络接口文件
+
+/etc/sysconfig/network-scripts/ 目录
+ 	BOOTPROTO 请求地址信息
+	ONBOOT 系统启用是接口是否自动启用
+	PEERDNS 设置NO可以防止DHCP覆盖/etc/resolv.conf文件
+
+与本地网络相关的系统设置
+/etc/sysconfig/network 
+
+/etc/hostname 系统主机名
+
+/etc/resolv.conf DNS服务器和搜索域的设置
+
+/etc/nsswitch.conf 设置确定了主机名解析过程，先搜索/etc/hosts然后搜索/etc/resolv.conf文件中所列出的DNS服务器
